@@ -2,6 +2,9 @@ package com.garousi.entities;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 @Entity
 @Table(name = "people")
 public class Person {
@@ -19,6 +22,18 @@ public class Person {
 
     @Column(name = "email", unique = true)
     private String email;
+
+    @Column(name = "date_of_birth")
+    private LocalDate dob;
+
+
+    public LocalDate getDob() {
+        return dob;
+    }
+
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
+    }
 
     public String getEmail() {
         return email;
