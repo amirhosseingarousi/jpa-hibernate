@@ -26,6 +26,16 @@ public class Person {
     @Column(name = "date_of_birth")
     private LocalDate dob;
 
+    @Transient
+    private Integer temp;
+
+    public Integer getTemp() {
+        return temp;
+    }
+
+    public void setTemp(Integer temp) {
+        this.temp = temp;
+    }
 
     public LocalDate getDob() {
         return dob;
